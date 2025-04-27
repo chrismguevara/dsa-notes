@@ -9,6 +9,9 @@ import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import remarkGfm from "remark-gfm";
 
 export default defineConfig({
+  // https://vite.dev/guide/build.html#relative-base
+  // Need to handle the basepath for GitHub Pages
+  base: process.env.NODE_ENV === "development" ? "/" : "/dsa-notes/",
   plugins: [tailwindcss(), mdx({
     remarkPlugins: [remarkGfm, remarkFrontmatter, remarkMdxFrontmatter],
   }), reactRouter(), tsconfigPaths()],
