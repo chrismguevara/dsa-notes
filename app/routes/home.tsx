@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import type { Route } from "./+types/home";
 
 const postsRaw = import.meta.glob("../posts/**.mdx", {
@@ -62,10 +63,10 @@ export default function Home() {
             </div>
             <div className="group relative">
               <h3 className="mt-3 text-lg/6 font-semibold text-gray-900 dark:text-white group-hover:text-gray-600">
-                <a href={post.href}>
+                <Link to={post.href}>
                   <span className="absolute inset-0" />
                   {post.title}
-                </a>
+                </Link>
               </h3>
               <p className="mt-5 line-clamp-3 text-sm/6 text-gray-600 dark:text-gray-400">
                 {post.description}
