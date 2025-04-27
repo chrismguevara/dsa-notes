@@ -9,12 +9,19 @@
     "typecheck": "react-router typegen && tsc"
   },
   "dependencies": {
+    "@esbuild-plugins/node-globals-polyfill": "^0.2.3",
+    "@heroicons/react": "^2.2.0",
+    "@mdx-js/react": "^3.1.0",
+    "@mdx-js/rollup": "^3.1.0",
     "@react-router/node": "^7.5.2",
     "@react-router/serve": "^7.5.2",
     "isbot": "^5.1.17",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-router": "^7.5.2"
+    "react-router": "^7.5.2",
+    "remark-frontmatter": "^5.0.0",
+    "remark-gfm": "^4.0.1",
+    "remark-mdx-frontmatter": "^5.1.0"
   },
   "devDependencies": {
     "@react-router/dev": "^7.5.2",
