@@ -13,3 +13,5 @@ body {
     color-scheme: dark;
   }
 }
+
+@import "./styles/code-highlight.css";

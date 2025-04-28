@@ -1,0 +1,30 @@
+---
+title: Code Rendering
+description: I'm tring out ways to render code in this blog.
+datetime: 2025-04-28T03:07:47.990Z
+---
+
+# Code Rendering
+
+In future blog posts, I want to render code snippets. After playing around with some MDX plugins, I think I finally settled on one.
+
+## Rehype Syntax Highlighting
+
+[Rehype-pretty-code](https://rehype-pretty.pages.dev/) is an MDX plugin that adds syntax higlighting to your code blocks.
+You can also highlight certain lines and show line numbers.
+
+For example, here's a function that calculates a sum of a list of numbers. I've highlighted the for-loop section.
+
+```ts {3-5} showLineNumbers
+function sum(nums: number[]): number {
+  let sum = 0;
+  for (let num of nums) {
+    sum += num;
+  }
+  return sum;
+}
+```
+
+Not bad. I like this high contrast style. I really like how I can show the line numbers and highlight multiple lines. I'll definitely be using this from here on out.
+
+(Btw, during my research, I learned about [CSS counters](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters). Was this always a thing? This seems pretty useful!)

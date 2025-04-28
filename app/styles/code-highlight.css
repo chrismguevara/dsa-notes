@@ -1,0 +1,44 @@
+/*
+
+This is a custom CSS file that I use to style the code blocks in my blog posts.
+This assumes that rehype-pretty-code is used to generate the code blocks.
+*/
+
+[data-rehype-pretty-code-figure] {
+  @apply mb-6;
+  pre[data-language] {
+    @apply p-1 rounded-md;
+
+    code [data-highlighted-line] {
+      @apply bg-gray-100 dark:bg-gray-700;
+    }
+  }
+}
+
+code[data-line-numbers] {
+  counter-reset: line;
+}
+
+code[data-line-numbers] > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+
+  /* Other styling */
+  display: inline-block;
+  width: 0.75rem;
+  margin-right: 2rem;
+  text-align: right;
+  color: gray;
+}
+
+code[data-line-numbers-max-digits="2"] > [data-line]::before {
+  width: 1.25rem;
+}
+
+code[data-line-numbers-max-digits="3"] > [data-line]::before {
+  width: 1.75rem;
+}
+
+code[data-line-numbers-max-digits="4"] > [data-line]::before {
+  width: 2.25rem;
+}
